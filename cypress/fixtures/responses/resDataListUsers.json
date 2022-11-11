@@ -1,0 +1,59 @@
+{
+    "res_list_user_page_1":{
+        "page": 1,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data_users": {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        }
+    },
+    "res_list_user_per_page_1":{
+        "page": 1,
+        "per_page": 1,
+        "total": 12,
+        "total_pages": 12,
+        "data_users": {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        }
+    },
+    "res_list_user_page_2_per_page_2":{
+        "page": 2,
+        "per_page": 2,
+        "total": 12,
+        "total_pages": 6,
+        "data_users": [{
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        },
+        {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+        }]
+    },
+    "res_list_user":{
+        "page": 1,
+        "per_page": 1,
+        "total": 12,
+        "total_pages": 12,
+        "id": 1,
+        "email": "george.bluth@reqres.in",
+        "first_name": "George",
+        "last_name": "Bluth",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg"
+    }
+}
