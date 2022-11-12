@@ -29,23 +29,23 @@ When("User click Subscribe", () => {
     paymentPage.btnSubscribe()
 })
 
-When("User enter a email", (email) => {
+When("User enter a email {}", (email) => {
     paymentPage.fillEmailComplete(email)
 })
 
-When("User enter a card number", (cardNumber) => {
+When("User enter a card number {}", (cardNumber) => {
     paymentPage.fillCardNumber(cardNumber)
 })
 
-When("User enter a card expired", (cardExpiry) => {
+When("User enter a card expired {}", (cardExpiry) => {
     paymentPage.fillCardExpired(cardExpiry)
 })
 
-When("User enter a card cvc", (cardCvc) => {
+When("User enter a card cvc {}", (cardCvc) => {
     paymentPage.fillCardCVC(cardCvc)
 })
 
-When("User enter a card name", (cardName) => {
+When("User enter a card name {}", (cardName) => {
     paymentPage.fillCardName(cardName)
 })
 
@@ -53,11 +53,15 @@ When("User scroll to the bottom page", () => {
     paymentPage.scrollToBottomPage()
 })
 
-When("User enter a email", (email) => {
-    paymentPage.fillEmail(email)
+When("User click upgrade button", () => {
+    paymentPage.btnUpgrade()
 })
 
-When("User click Subscribe", () => {
+When("User enter a email subs {}", (emailSubs) => {
+    paymentPage.fillEmailSubs(emailSubs)
+})
+
+When("User click Subscribe email", () => {
     paymentPage.btnSubscribeEmail()
 })
 
@@ -74,11 +78,7 @@ Then("User got error", (errorMessage) => {
         expect(paymentPage.errorCardInfo(errorMessage)).to.be.true()
     }
 
-Then("Displays message", (message) => {
-    if(paymentPage.messageSubsSuccess(message)){
-        expect(paymentPage.messageSubsSuccess(message)).to.be.true()
-    } else if(paymentPage.messageSubsError(message)){
-        expect(paymentPage.messageSubsError(message)).to.be.true()
-    }
+Then("Displays message {}", (message) => {
+    paymentPage.messageSubsError(message)
 })
 })
