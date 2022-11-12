@@ -76,12 +76,16 @@ class paymentPage{
         cy.get('body > div.container > div > div > h2:nth-child(27)').scrollIntoView()
     }
 
-    fillEmail(emailSubs) {
+    fillEmailSubs(emailSubs) {
         cy.get('#mce-EMAIL').type(emailSubs)
     }
 
+    btnUpgrade() {
+        cy.get('#trigger-pro').click()
+    }
+
     btnSubscribeEmail() {
-        cy.get('#mc-embedded-subscribe').click()
+        cy.get('#mc-embedded-subscribe').invoke("removeAttr", "target").click()
     }
 
     messageSubsSuccess(message){
