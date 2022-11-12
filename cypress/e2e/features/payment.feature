@@ -40,15 +40,27 @@ Examples:
     | reza@gmail.com  | 4024007138059893  |   10/25     |   12    |   REZA   | Your card's security code is incomplete.   |
     | reza@gmail.com  | 4024007138059893  |   10/25     |   123   |   REZA   | Your card number is incorrect              |
 
-Scenario Outline: Subscription Email
+Scenario Outline: Subscription Email Valid
     Given User visit website Reqres
     When User scroll to the bottom page
-    And User enter a email <emailSubs>
-    And User click Subscribe
+    And User click upgrade button
+    And User enter a email subs <emailSubs>
+    And User click Subscribe email
+    Then Displays message <message>
+
+Examples:
+| emailSubs      | message               |
+| reza@gmail.com | Subscription Confirmed |
+
+Scenario Outline: Subscription Email Invalid
+    Given User visit website Reqres
+    When User scroll to the bottom page
+    And User click upgrade button
+    And User enter a email subs <emailSubs>
+    And User click Subscribe email
     Then Displays message <message>
 
 Examples:
     | emailSubs      | message                                            |
     | reza           | An email address must contain a single @           |
     | @gmail.com     | The username portion of the email address is empty |
-    | reza@gmail.com | Subscription Confirmed                              |
